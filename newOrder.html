@@ -51,14 +51,14 @@
 
     <main class="container mt-5">
         <h2>New Order</h2>
-        <form action="/submit_laundry_order" method="post" onsubmit="return validateForm()">
+        <form action="/submit_laundry_order" method="post" onsubmit="return validateForm()" autocomplete="off">
             <div class="form-group">
                 <label for="name">Nama:</label>
-                <input type="text" class="form-control" id="name" name="name">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan Nama Anda">
             </div>
             <div class="form-group">
                 <label for="address">Alamat:</label>
-                <input type="text" class="form-control" id="address" name="address">
+                <input type="text" class="form-control" id="address" name="address" placeholder="Masukkan Alamat Anda">
             </div>
             <div class="form-group mb-2">
                 <label for="laundry_type">Jenis Laundry:</label>
