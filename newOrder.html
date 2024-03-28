@@ -52,6 +52,8 @@
     <main class="container mt-5">
         <h2>New Order</h2>
         <form action="/submit_laundry_order" method="post" onsubmit="return validateForm()">
+
+        <form action="/submit_laundry_order" method="post">
             <div class="form-group">
                 <label for="name">Nama:</label>
                 <input type="text" class="form-control" id="name" name="name">
@@ -64,6 +66,9 @@
                 <label for="laundry_type">Jenis Laundry:</label>
                 <select class="form-control" id="laundry_type" name="laundry_type">
                     <option value="" disabled selected>Pilih Jenis Laundry</option>
+            <div class="form-group">
+                <label for="laundry_type">Jenis Loundry:</label>
+                <select class="form-control" id="laundry_type" name="laundry_type">
                     <option value="regular">Regular</option>
                     <option value="express">Express</option>
                 </select>
@@ -71,6 +76,9 @@
             <div class="form-group mb-2">
                 <label for="estimated_day">Estimasi Hari:</label>
                 <input type="number" class="form-control" id="estimated_day" name="estimated_day" min="0">
+            <div class="form-group">
+                <label for="estimated_day">Estimasi Hari:</label>
+                <input type="number" class="form-control" id="estimated_day" name="estimated_day">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
