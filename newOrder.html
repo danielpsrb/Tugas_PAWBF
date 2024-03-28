@@ -9,11 +9,74 @@
     <!-- link ke file css -->
     <link rel="stylesheet" href="css/newOrder.css">
     <title>Document</title>
+    <!-- SweetAlert2 library -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand me-auto"><img src="/image/navbar/logo.jpg" width="50" height="50" /></a>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <a href="#" class="navbar-brand me-auto"><img src="/image/navbar/logo.jpg" width="50" height="50" /></a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="newOrder.html">New Order</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="orderInfo.html">Order Info</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="profil.html">Profile</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <img class="navUsers" aria-current="page" src="/image/navbar/users.png">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <!-- END OF NAVBAR -->
 
-
+    <main class="container mt-5">
+        <h2>New Order</h2>
+        <form action="/submit_laundry_order" method="post" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="name">Nama:</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="address">Alamat:</label>
+                <input type="text" class="form-control" id="address" name="address">
+            </div>
+            <div class="form-group mb-2">
+                <label for="laundry_type">Jenis Laundry:</label>
+                <select class="form-control" id="laundry_type" name="laundry_type">
+                    <option value="" disabled selected>Pilih Jenis Laundry</option>
+                    <option value="regular">Regular</option>
+                    <option value="express">Express</option>
+                </select>
+            </div>
+            <div class="form-group mb-2">
+                <label for="estimated_day">Estimasi Hari:</label>
+                <input type="number" class="form-control" id="estimated_day" name="estimated_day" min="0">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </main>
     <!-- link bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/newOrder.js"></script>
 </body>
 </html>
